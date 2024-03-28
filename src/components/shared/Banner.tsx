@@ -3,7 +3,7 @@ const Banner = () => {
   return (
     <div className={styles.banner_container}>
       <div className="w-full h-full flex justify-center items-center ">
-        <div className="w-[60%] h-[60%] rounded-xl text-center bg-white px-16 py-20">
+        <div className="w-[50%] h-[60%] rounded-xl text-center bg-white px-16 py-20 flex flex-col justify-center items-center ">
           <p className="w-40 mx-auto rounded-full p-2 my-5 bg-cyan-100 text-accent">
             29 January 2024
           </p>

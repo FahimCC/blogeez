@@ -2,16 +2,20 @@ import LatestBlogs from "@/components/shared/LatestBlogs/LatestBlogs";
 
 const HomePage = async () => {
 
-  const res = await fetch(`http://localhost:8000/blogs`);
+  //SSG - Static Site Generation
+  const res = await fetch(`http://localhost:8000/blogs`, {
+    // cache: "force-cache", by default
+    next: {
+      revalidate: 30,
+    },
+  });
   const blogs = await res.json();
 
   // console.log(blogs)
 
   return (
-    <div className="w-[90%] mx-auto my-5">
-      
-
-    <LatestBlogs blogs={blogs}/>
+    <div >
+      <LatestBlogs blogs={blogs} />
     </div>
   );
 };

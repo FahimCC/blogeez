@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
+import placeholder from "@/assets/placeholder-image.webp";
 
 const LatestBlogCard = ({ blog }: { blog: BLog }) => {
   return (
     <div key={blog.id} className="card w-full bg-base-100 shadow-xl">
       <figure>
         <Image
-          src={blog.blog_image}
+          src={blog.blog_image || placeholder}
           width={600}
           height={100}
           alt="blog image"
